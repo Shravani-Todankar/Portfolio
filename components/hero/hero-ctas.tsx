@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { LayoutGroup, motion } from "motion/react";
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -33,6 +33,23 @@ export function HeroCtas(): ReactNode {
               aria-hidden="true"
             />
           </Link>
+        </motion.div>
+
+        <motion.div
+          layout
+          transition={{ layout: { duration: 0.55, ease: EASE } }}
+        >
+          <a
+            href="/cv.pdf"
+            download
+            className="border border-foreground/5 focus-ring group inline-flex cursor-pointer items-center gap-2 rounded-xl bg-background px-5 py-2.5 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground/4 hover:text-foreground"
+          >
+            Download CV
+            <Download
+              className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5"
+              aria-hidden="true"
+            />
+          </a>
         </motion.div>
       </motion.div>
     </LayoutGroup>
