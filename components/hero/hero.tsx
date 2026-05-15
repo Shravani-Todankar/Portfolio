@@ -18,19 +18,19 @@ export function Hero(): ReactNode {
               <span aria-hidden="true" className="mx-0.5">
                 👋
               </span>
-              , I&rsquo;m Josh
+              , I&rsquo;m Shravani
             </p>
 
             <h1 className="text-[2.75rem] font-medium leading-[1.05] tracking-tight text-foreground md:text-[2.5rem] lg:text-[3.65rem]">
               <span className="block whitespace-nowrap">
-                Design engineer &
+                Creative Web
               </span>
-              <span className="block whitespace-nowrap">AI enthusiast</span>
+              <span className="block whitespace-nowrap">Developer</span>
             </h1>
 
             <p className="max-w-[34ch] text-[22px] leading-[1.4] tracking-tight text-foreground/65">
-              Independent engineer focused on interfaces that feel calm,
-              considered, and quietly fast.
+              Front-end developer building sleek, functional websites with
+              WordPress, Webflow, Shopify, and React.
             </p>
 
             <HeroCtas />
@@ -42,7 +42,7 @@ export function Hero(): ReactNode {
                 <PortraitMorph
                   srcA={PORTRAIT_SRC}
                   srcB={PORTRAIT_HOVER_SRC}
-                  alt="Josh portrait"
+                  alt="Shravani portrait"
                 />
               </div>
             </div>

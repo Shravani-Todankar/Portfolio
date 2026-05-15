@@ -1,11 +1,13 @@
 import {
   ArrowRight,
-  Bot,
-  Compass,
-  Layers,
-  LineChart,
+  Briefcase,
+  Building2,
+  GraduationCap,
+  Landmark,
+  Leaf,
+  Mouse,
+  ShoppingBag,
   Sparkles,
-  Wand2,
 } from "lucide-react";
 import type { ComponentType, ReactNode } from "react";
 import Image from "next/image";
@@ -33,85 +35,108 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    id: "loom",
+    id: "tycoon",
     icon: Sparkles,
-    iconLabel: "LOOM",
-    title:
-      "An AI writing companion that thinks alongside you, allowing you to capture ideas, edits, and drafts in one focused space.",
+    iconLabel: "India's Future Tycoon",
+    title: "Brand landing experience for India's Future Tycoon.",
     description:
-      "I designed Loom, a focused writing surface where ideas, edits, and drafts coexist without the chat clutter.",
-    meta: "Design Engineer, 2024",
+      "Hard-coded marketing site built with HTML, CSS and JavaScript, designed to capture leads and present the program with cinematic polish.",
+    meta: "Web Developer, 2025",
+    imageRatio: 1024 / 768,
+    image:
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1024&q=80",
+    imageAlt: "India's Future Tycoon landing page mockup",
+  },
+  {
+    id: "spenta",
+    icon: Building2,
+    iconLabel: "Spenta",
+    title: "Real Estate CRM front-end for Spenta.",
+    description:
+      "Built the CRM front-end for one of Mumbai's premier real estate developers, focused on clean data presentation and an effortless agent workflow.",
+    meta: "Front-end Developer, 2025",
     imageRatio: 752 / 497,
     image:
-      "https://cdn.dribbble.com/userupload/46128964/file/b92b9d268dd928642ca94bd49e32923a.jpg?resize=752x497&vertical=center",
-    imageAlt: "Loom AI writing companion mockup",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1024&q=80",
+    imageAlt: "Spenta real estate CRM mockup",
   },
   {
-    id: "atlas",
-    icon: Compass,
-    iconLabel: "Atlas Studio",
-    title: "A two week brand and product sprint for a creative studio.",
+    id: "enpower",
+    icon: GraduationCap,
+    iconLabel: "ENpower",
+    title: "School learning platform revamp for ENpower.",
     description:
-      "End to end identity, marketing site, and a small product surface designed to feel quietly confident across every touchpoint.",
-    meta: "Product & Brand Designer, 2025",
+      "Redesigned and re-engineered the dashboards, report cards and admin tools for the neoRiSE Skill Passport program used across partner schools.",
+    meta: "Full-stack Developer, 2025",
     imageRatio: 1024 / 768,
     image:
-      "https://cdn.dribbble.com/userupload/24599416/file/original-1ae5075dcd129aebb16bdbca24b41ac7.png?resize=1024x768&vertical=center",
-    imageAlt: "Atlas Studio brand and product sprint mockup",
+      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1024&q=80",
+    imageAlt: "ENpower school learning platform mockup",
   },
   {
-    id: "rhythm",
-    icon: LineChart,
-    iconLabel: "Rhythm",
-    title: "Calm analytics for indie founders.",
+    id: "partagalimath",
+    icon: Landmark,
+    iconLabel: "Partagalimath",
+    title: "Hard-coded landing page for Partagalimath.",
     description:
-      "A weekly digest that turns raw product data into a simple narrative. Built so you can read it on a Sunday with coffee.",
-    meta: "Founder & Designer, 2024",
+      "A static, performance-first landing page hand-coded in HTML/CSS/JS, designed to honour the institution's heritage while staying fast on any device.",
+    meta: "Front-end Developer, 2024",
     imageRatio: 1024 / 768,
     image:
-      "https://cdn.dribbble.com/userupload/47357856/file/75841fa59f32f05ca6c5ddf02d08dfe6.png?resize=1024x768&vertical=center",
-    imageAlt: "Rhythm calm analytics mockup",
+      "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1024&q=80",
+    imageAlt: "Partagalimath heritage landing page mockup",
   },
   {
-    id: "groove",
-    icon: Wand2,
-    iconLabel: "Groove",
-    title:
-      "Reimagining the booking flow for a music school, asisting thousands of students in finding the right lessons.",
+    id: "mosaic",
+    icon: Leaf,
+    iconLabel: "Mosaic Minds",
+    title: "WordPress + LMS education website for Mosaic Minds.",
     description:
-      "I led a redesign of the lesson booking experience, cutting drop off in half and making the schedule feel like a calendar people actually want to open.",
-    meta: "Lead Designer, 2023",
+      "Built a WordPress site with an integrated LMS, custom course flows and a streamlined enrolment journey for learners and parents.",
+    meta: "WordPress Developer, 2024",
     imageRatio: 1024 / 768,
     image:
-      "https://cdn.dribbble.com/userupload/43955214/file/original-d4cde1de803e84b97d8892e3444c04b0.png?resize=1024x768&vertical=center",
-    imageAlt: "Groove music school booking flow mockup",
+      "https://images.unsplash.com/photo-1610484826917-0f101a7c63b9?w=1024&q=80",
+    imageAlt: "Mosaic Minds LMS website mockup",
   },
   {
-    id: "fieldnote",
-    icon: Layers,
-    iconLabel: "Fieldnote",
-    title:
-      "A pocket sized research tool for design teams that want to get out of their docs and into the world.",
+    id: "sarvatra",
+    icon: Briefcase,
+    iconLabel: "Sarvatra Technologies",
+    title: "Corporate website revamp for Sarvatra Technologies.",
     description:
-      "Capture quotes, tag patterns, and synthesize themes in one place. The interface stays out of the way so the thinking can happen.",
-    meta: "Design Engineer, 2024",
-    imageRatio: 1024 / 768,
+      "Reimagined the marketing site for a fintech infrastructure company — clearer storytelling, modern UI patterns and a tighter content system.",
+    meta: "Web Developer, 2024",
+    imageRatio: 752 / 497,
     image:
-      "https://cdn.dribbble.com/userupload/30310902/file/original-621e7fe47be9d11ee14544456c693bec.png?resize=1024x768&vertical=center",
-    imageAlt: "Fieldnote pocket sized research tool mockup",
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1024&q=80",
+    imageAlt: "Sarvatra Technologies website revamp mockup",
   },
   {
-    id: "talkback",
-    icon: Bot,
-    iconLabel: "Talkback",
-    title: "A friendlier interface for talking to language models.",
+    id: "eatprot",
+    icon: ShoppingBag,
+    iconLabel: "EatProt",
+    title: "E-commerce revamp for EatProt.",
     description:
-      "An exploration of how AI chat could feel less like a terminal and more like a conversation with a curious friend.",
-    meta: "Independent Project, 2025",
+      "Reworked the Shopify storefront and product flows for a high-protein food brand — faster pages, sharper PDPs, smoother checkout.",
+    meta: "Shopify Developer, 2024",
     imageRatio: 1024 / 768,
     image:
-      "https://cdn.dribbble.com/userupload/16560717/file/original-c6f745d50302d66609bfe080f99f5396.png?resize=1024x768&vertical=center",
-    imageAlt: "Talkback friendlier AI chat interface mockup",
+      "https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=1024&q=80",
+    imageAlt: "EatProt e-commerce storefront mockup",
+  },
+  {
+    id: "rapoo",
+    icon: Mouse,
+    iconLabel: "Rapoo India",
+    title: "E-commerce website revamp for Rapoo India.",
+    description:
+      "Rebuilt the Rapoo India storefront with a richer product catalogue, cleaner navigation and a more confident brand presence.",
+    meta: "E-commerce Developer, 2024",
+    imageRatio: 1024 / 768,
+    image:
+      "https://images.unsplash.com/photo-1527814050087-3793815479db?w=1024&q=80",
+    imageAlt: "Rapoo India e-commerce website mockup",
   },
 ];
 

@@ -12,22 +12,17 @@ type Chip = {
 };
 
 const CHIPS: Chip[] = [
-  {
-    label: "Figma",
-    slug: "figma",
-    bg: "#1f1f1f",
-    fg: "#ffffff",
-    iconUrl: "https://svgl.app/library/figma.svg",
-  },
+  { label: "HTML5", slug: "html5", bg: "#E34F26", fg: "#ffffff" },
+  { label: "CSS3", slug: "css3", bg: "#1572B6", fg: "#ffffff" },
+  { label: "WordPress", slug: "wordpress", bg: "#21759B", fg: "#ffffff" },
+  { label: "Shopify", slug: "shopify", bg: "#7AB55C", fg: "#ffffff" },
+  { label: "Webflow", slug: "webflow", bg: "#146EF5", fg: "#ffffff" },
+  { label: "GSAP", slug: "greensock", bg: "#0AE448", fg: "#0a0a0a" },
   { label: "React", slug: "react", bg: "#1FB6CB", fg: "#ffffff" },
-  { label: "Next.js", slug: "nextdotjs", bg: "#1f1f1f", fg: "#ffffff" },
-  { label: "TypeScript", slug: "typescript", bg: "#2F74C0", fg: "#ffffff" },
-  { label: "shadcn/ui", slug: "shadcnui", bg: "#5b54ff", fg: "#ffffff" },
-  { label: "Cursor", slug: "cursor", bg: "#111111", fg: "#ffffff" },
-  { label: "GSAP", slug: "gsap", bg: "#0AE448", fg: "#0a0a0a" },
+  { label: "Framer", slug: "framer", bg: "#0055FF", fg: "#ffffff" },
+  { label: "MySQL", slug: "mysql", bg: "#4479A1", fg: "#ffffff" },
   { label: "GitHub", slug: "github", bg: "#181717", fg: "#ffffff" },
-  { label: "Vercel", slug: "vercel", bg: "#0a0a0a", fg: "#ffffff" },
-  { label: "Tailwind CSS", slug: "tailwindcss", bg: "#2BBCF5", fg: "#ffffff" },
+  { label: "VS Code", slug: "vscodium", bg: "#007ACC", fg: "#ffffff" },
 ];
 
 const CHIP_RADIUS = 14;
