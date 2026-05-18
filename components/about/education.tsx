@@ -64,27 +64,27 @@ function EducationCard({ entry }: { entry: Entry }): ReactNode {
     .charAt(0);
   return (
     <article className="border-foreground/8 bg-foreground/2 dark:bg-foreground/5 flex flex-col gap-4 rounded-3xl border p-5 sm:p-6">
-      <div className="flex items-start gap-4">
-        <span
-          className="border-foreground/15 text-foreground/65 inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border bg-background text-[20px] font-semibold tracking-tight"
-          aria-hidden="true"
-        >
-          {initials}
-        </span>
-        <div className="flex min-w-0 flex-col gap-1.5">
-          <span className="text-[11px] uppercase tracking-[0.12em] text-foreground/45">
-            {entry.group}
+      <div className="flex items-start justify-between gap-4">
+        <div className="flex items-start gap-4">
+          <span
+            className="border-foreground/15 text-foreground/65 inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border bg-background text-[20px] font-semibold tracking-tight"
+            aria-hidden="true"
+          >
+            {initials}
           </span>
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex min-w-0 flex-col gap-1.5">
+            <span className="text-[11px] uppercase tracking-[0.12em] text-foreground/45">
+              {entry.group}
+            </span>
             <span className="text-[17px] font-semibold leading-tight tracking-tight text-foreground sm:text-[18px]">
               {entry.degree}
             </span>
-            <GradePill grade={entry.grade} />
+            <span className="text-[14px] tracking-tight text-foreground/65 sm:text-[15px]">
+              {entry.school}
+            </span>
           </div>
-          <span className="text-[14px] tracking-tight text-foreground/65 sm:text-[15px]">
-            {entry.school}
-          </span>
         </div>
+        <GradePill grade={entry.grade} />
       </div>
 
       <div className="border-foreground/8 flex flex-wrap items-center gap-x-4 gap-y-1 border-t pt-4 text-[13px] tracking-tight text-foreground/60 sm:text-[14px]">
