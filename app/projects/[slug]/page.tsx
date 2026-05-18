@@ -271,32 +271,6 @@ export default async function ProjectDetailPage({
 
       <section className="mx-auto w-full max-w-275 px-6 pt-20 sm:px-10 sm:pt-28">
         <FadeIn>
-          <SectionLabel>Gallery</SectionLabel>
-        </FadeIn>
-        <div className="mt-6 grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
-          {project.gallery.map((src, i) => (
-            <FadeIn key={src} delay={Math.min(i * 0.05, 0.2)}>
-              <div
-                className={`ring-foreground/5 relative w-full overflow-hidden rounded-3xl bg-foreground/5 ring-1 ${
-                  i === 0 ? "md:col-span-2" : ""
-                }`}
-                style={{ aspectRatio: i === 0 ? 16 / 9 : 4 / 3 }}
-              >
-                <Image
-                  src={src}
-                  alt={`${project.iconLabel} gallery image ${i + 1}`}
-                  fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-275 px-6 pt-20 sm:px-10 sm:pt-28">
-        <FadeIn>
           <div className="flex items-end justify-between gap-6">
             <SectionLabel>Related work</SectionLabel>
             <Link
