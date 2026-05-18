@@ -3,20 +3,57 @@
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useRef, useSyncExternalStore, type ReactNode } from "react";
 
-import { DottedPattern } from "@/components/ui/dotted-pattern";
-
 type Polaroid = {
   id: string;
   rotate: number;
+  src: string;
+  alt: string;
+  caption: string;
 };
 
 const PHOTOS: Polaroid[] = [
-  { id: "a", rotate: -8 },
-  { id: "b", rotate: 6 },
-  { id: "c", rotate: -4 },
-  { id: "d", rotate: 7 },
-  { id: "e", rotate: -6 },
-  { id: "f", rotate: 5 },
+  {
+    id: "portrait",
+    rotate: -8,
+    src: "/Hero-still.png",
+    alt: "Portrait of Shravani",
+    caption: "Hello",
+  },
+  {
+    id: "workspace",
+    rotate: 6,
+    src: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=80",
+    alt: "Coding workspace setup",
+    caption: "Workspace",
+  },
+  {
+    id: "travel",
+    rotate: -4,
+    src: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80",
+    alt: "Travel moment",
+    caption: "Travel",
+  },
+  {
+    id: "sketching",
+    rotate: 7,
+    src: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=900&q=80",
+    alt: "Sketching in a notebook",
+    caption: "Sketching",
+  },
+  {
+    id: "reading",
+    rotate: -6,
+    src: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=900&q=80",
+    alt: "Reading a book",
+    caption: "Reading",
+  },
+  {
+    id: "designing",
+    rotate: 5,
+    src: "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=900&q=80",
+    alt: "Designing UI on screen",
+    caption: "Designing",
+  },
 ];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -67,14 +104,25 @@ function PolaroidCard({
         delay: 0.05 + index * 0.08,
         ease: EASE,
       }}
+      whileHover={{ scale: 1.06, rotate: photo.rotate * 0.4 }}
       style={{
         x: tx,
         y: ty,
         rotate: photo.rotate,
       }}
-      className="relative aspect-[3/4] w-[clamp(6rem,11vw,9rem)] shrink-0 overflow-hidden rounded-2xl border-6 border-neutral-300/40 bg-white p-1.5 dark:border-white/15 dark:bg-neutral-900"
+      className="group relative aspect-[3/4] w-[clamp(6rem,11vw,9rem)] shrink-0 cursor-pointer rounded-2xl border-6 border-neutral-300/40 bg-white p-1.5 shadow-lg dark:border-white/15 dark:bg-neutral-900"
     >
-      <DottedPattern className="relative h-full w-full overflow-hidden rounded-xl" />
+      <div className="relative h-[78%] w-full overflow-hidden rounded-xl bg-foreground/5">
+        <img
+          src={photo.src}
+          alt={photo.alt}
+          className="absolute inset-0 h-full w-full object-cover"
+          draggable={false}
+        />
+      </div>
+      <p className="mt-1.5 text-center text-[10px] font-medium uppercase tracking-[0.12em] text-neutral-700 sm:text-[11px] dark:text-neutral-300">
+        {photo.caption}
+      </p>
     </motion.div>
   );
 }
