@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 
 import { HeroCtas } from "./hero-ctas";
+import { HeroTechRow } from "./hero-tech-row";
 import { FadeIn, ScaleUnblur } from "@/components/ui/motion-primitives";
 import { PortraitMorph } from "./portrait-morph";
 
@@ -28,10 +29,14 @@ export function Hero(): ReactNode {
               <span className="block whitespace-nowrap">Developer</span>
             </h1>
 
-            <p className="max-w-[34ch] text-[22px] leading-[1.4] tracking-tight text-foreground/65">
-              Front-end developer building sleek, functional websites with
-              WordPress, Webflow, Shopify, and React.
+            <p className="max-w-[52ch] text-[18px] leading-[1.5] tracking-tight text-foreground/65 sm:text-[20px]">
+              I craft immersive, responsive, and high-performance web
+              experiences using React, JavaScript, GSAP, Shopify, WordPress,
+              and Webflow &mdash; with a strong focus on smooth animations,
+              clean UI, and interactive frontend development.
             </p>
+
+            <HeroTechRow />
 
             <HeroCtas />
           </FadeIn>
