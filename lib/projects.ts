@@ -10,6 +10,13 @@ import {
 } from "lucide-react";
 import type { ComponentType } from "react";
 
+export type StackByCategory = {
+  platform?: string[];
+  frontend?: string[];
+  backend?: string[];
+  infrastructure?: string[];
+};
+
 export type Project = {
   slug: string;
   icon: ComponentType<{ className?: string }>;
@@ -24,11 +31,17 @@ export type Project = {
   year: string;
   client: string;
   role: string;
+  status: string;
+  team: string;
+  timeline: string;
+  tags: string[];
+  liveUrl: string;
   overview: string;
   approach: string;
   features: string[];
-  stack: string[];
-  outcomes: string[];
+  stack: StackByCategory;
+  whyBuilt: string[];
+  impact: string[];
   gallery: string[];
 };
 
@@ -49,6 +62,11 @@ export const PROJECTS: Project[] = [
     year: "2026",
     client: "ENpower",
     role: "Front-end Developer",
+    status: "Live",
+    team: "Solo",
+    timeline: "Jan – Mar 2026",
+    tags: ["Landing Page", "HTML/CSS/JS", "GSAP", "Completed"],
+    liveUrl: "#",
     overview:
       "A national program for young innovators aged 13–18 needed a landing experience that could simplify complex storytelling, hold attention, and convert visits into registrations — all from a single page.",
     approach:
@@ -59,15 +77,17 @@ export const PROJECTS: Project[] = [
       "Responsive single-page architecture",
       "Clear, repeated registration CTAs",
     ],
-    stack: [
-      "HTML",
-      "Tailwind CSS",
-      "JavaScript",
-      "GSAP",
-      "ScrollTrigger",
-      "Google Fonts",
+    stack: {
+      frontend: ["HTML", "Tailwind CSS", "JavaScript", "GSAP", "ScrollTrigger"],
+      infrastructure: ["Google Fonts", "Static Hosting"],
+    },
+    whyBuilt: [
+      "Reach 13–18 year olds with simple, action-driven storytelling",
+      "Drive registrations without depending on a separate marketing site",
+      "Keep the campaign lightweight and easy to update",
+      "Stand out visually from the typical EdTech landing template",
     ],
-    outcomes: [
+    impact: [
       "Stronger program visibility and brand appeal",
       "Higher engagement through interactive design",
       "Increased likelihood of participant registration",
@@ -96,6 +116,11 @@ export const PROJECTS: Project[] = [
     year: "2026",
     client: "Spenta Corporation",
     role: "Front-end Developer",
+    status: "In Production",
+    team: "Team of 3",
+    timeline: "Feb 2026 – Present",
+    tags: ["CRM", "Django", "Bootstrap", "In Production"],
+    liveUrl: "#",
     overview:
       "Sales teams were juggling scattered customer data across multiple properties and managing leads through spreadsheets. There was no central tracking, no standard workflow, and no real-time visibility into the sales funnel.",
     approach:
@@ -108,17 +133,19 @@ export const PROJECTS: Project[] = [
       "Role-based authentication",
       "Email integration",
     ],
-    stack: [
-      "Django 5.2",
-      "Python",
-      "SQLite",
-      "DRF",
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Bootstrap",
+    stack: {
+      platform: ["Django 5.2", "Python"],
+      frontend: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+      backend: ["Django REST Framework", "SQLite"],
+      infrastructure: ["PythonAnywhere", "VPS Deployment"],
+    },
+    whyBuilt: [
+      "Replace spreadsheet-based lead tracking with a single source of truth",
+      "Give managers real-time visibility into the sales funnel",
+      "Enforce a standard qualification workflow across teams",
+      "Cut time-to-response on incoming enquiries",
     ],
-    outcomes: [
+    impact: [
       "Operational efficiency up across sales teams",
       "Reduced manual effort with centralised data",
       "Faster customer response times",
@@ -147,6 +174,11 @@ export const PROJECTS: Project[] = [
     year: "2026",
     client: "ENpower",
     role: "Web Developer",
+    status: "Live",
+    team: "Solo",
+    timeline: "2026",
+    tags: ["EdTech", "HTML/CSS/JS", "GSAP", "Completed"],
+    liveUrl: "#",
     overview:
       "The existing site suffered from poor structure and an outdated visual language. Content was unorganised, programs blurred together, navigation was weak, and engagement was low — failing to communicate ENpower's innovation-led approach.",
     approach:
@@ -159,15 +191,18 @@ export const PROJECTS: Project[] = [
       "Improved navigation hierarchy",
       "EmailJS-powered enquiry forms",
     ],
-    stack: [
-      "HTML5",
-      "CSS3",
-      "Vanilla JavaScript",
-      "GSAP",
-      "Bootstrap 5.3",
-      "EmailJS",
+    stack: {
+      frontend: ["HTML5", "CSS3", "Vanilla JavaScript", "Bootstrap 5.3"],
+      platform: ["GSAP", "EmailJS"],
+      infrastructure: ["Static Hosting"],
+    },
+    whyBuilt: [
+      "Differentiate ENpower from generic school program sites",
+      "Clarify five distinct programs without overwhelming visitors",
+      "Position the brand as modern, innovation-led EdTech",
+      "Enable schools and parents to enquire directly from the site",
     ],
-    outcomes: [
+    impact: [
       "Clearer presentation of program offerings",
       "Improved user experience and time on page",
       "Stronger brand positioning as modern EdTech",
@@ -196,6 +231,11 @@ export const PROJECTS: Project[] = [
     year: "2025",
     client: "Partagalimath",
     role: "Developer & Designer",
+    status: "Completed",
+    team: "Solo",
+    timeline: "2025",
+    tags: ["Landing Page", "HTML/CSS/JS", "Completed"],
+    liveUrl: "#",
     overview:
       "The previous CMS-based solution suffered from slow load times, poor mobile responsiveness, and inconsistent cross-device styling. Asset bloat was hurting both SEO and overall UX.",
     approach:
@@ -207,8 +247,17 @@ export const PROJECTS: Project[] = [
       "Minified CSS/JS and lazy-loaded images",
       "Cross-browser tested",
     ],
-    stack: ["HTML", "CSS", "JavaScript"],
-    outcomes: [
+    stack: {
+      frontend: ["HTML", "CSS", "JavaScript"],
+      infrastructure: ["Static Hosting", "CDN"],
+    },
+    whyBuilt: [
+      "Cut load times that the old CMS could not improve",
+      "Honour the institution's heritage with a refined visual feel",
+      "Remove CMS bloat to lift SEO and Core Web Vitals",
+      "Deliver a campaign-ready page that works on low-end devices",
+    ],
+    impact: [
       "Significantly faster page load times",
       "Lower bounce rate, higher time-on-page",
       "Better SEO performance",
@@ -237,6 +286,11 @@ export const PROJECTS: Project[] = [
     year: "2025",
     client: "Mosaic Minds",
     role: "WordPress & LMS Developer",
+    status: "Live",
+    team: "Solo",
+    timeline: "2025",
+    tags: ["WordPress", "LMS", "EdTech", "Live"],
+    liveUrl: "#",
     overview:
       "A new startup with no digital presence and no infrastructure to deliver courses. They needed a website, course management, an LMS for live classes and progress tracking, and a way to build brand credibility — all at once.",
     approach:
@@ -249,8 +303,18 @@ export const PROJECTS: Project[] = [
       "Contact and enquiry forms",
       "Mobile-responsive design",
     ],
-    stack: ["WordPress", "LMS Plugin", "Framer", "CSS", "JavaScript"],
-    outcomes: [
+    stack: {
+      platform: ["WordPress", "LMS Plugin"],
+      frontend: ["Custom CSS", "JavaScript"],
+      infrastructure: ["Managed Hosting", "Framer (landing)"],
+    },
+    whyBuilt: [
+      "Launch a fully online, project-based school from scratch",
+      "Give the team a self-serve way to add new courses",
+      "Support live classes without juggling 3 different tools",
+      "Build parent trust through a polished, credible web presence",
+    ],
+    impact: [
       "Launched the brand's digital presence end-to-end",
       "Enabled scalable online course delivery",
       "Improved enrolment conversion",
@@ -275,9 +339,14 @@ export const PROJECTS: Project[] = [
       "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1024&q=80",
     imageAlt: "Sarvatra Technologies website revamp mockup",
     tagline: "A modern fintech website redesign with content-managed flexibility.",
-    year: "Sep 2024 – Jan 2025",
+    year: "2024",
     client: "Sarvatra Technologies",
     role: "Webflow Developer",
+    status: "Completed",
+    team: "Solo",
+    timeline: "Sep 2024 – Jan 2025",
+    tags: ["Webflow", "CMS", "Fintech", "Completed"],
+    liveUrl: "#",
     overview:
       "The earlier site had an outdated design and a static layout with limited mobile responsiveness. It lacked modern visuals and the interactive elements expected of a fintech infrastructure brand.",
     approach:
@@ -289,8 +358,18 @@ export const PROJECTS: Project[] = [
       "Optimised load times",
       "Professional fintech visual identity",
     ],
-    stack: ["Webflow", "Webflow CMS", "JavaScript"],
-    outcomes: [
+    stack: {
+      platform: ["Webflow", "Webflow CMS"],
+      frontend: ["Custom CSS", "JavaScript"],
+      infrastructure: ["Webflow Hosting"],
+    },
+    whyBuilt: [
+      "Modernise a brand that had outgrown its old website",
+      "Give marketing the ability to update content without code",
+      "Communicate technical depth without overwhelming visitors",
+      "Improve mobile experience for an enterprise audience",
+    ],
+    impact: [
       "Refreshed, modern brand image",
       "Improved engagement and mobile reach",
       "Streamlined content management for the team",
@@ -315,9 +394,14 @@ export const PROJECTS: Project[] = [
       "https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=1024&q=80",
     imageAlt: "EatProt e-commerce storefront mockup",
     tagline: "A plant-based food brand redesigned on Shopify.",
-    year: "Oct 2024 – Feb 2025",
+    year: "2025",
     client: "EatProt",
     role: "Shopify Developer",
+    status: "Live",
+    team: "Solo",
+    timeline: "Oct 2024 – Feb 2025",
+    tags: ["Shopify", "E-commerce", "Live"],
+    liveUrl: "#",
     overview:
       "The original storefront lacked a modern look and didn't make the most of Shopify's commerce features. Product presentation was flat and conversion was suffering as a result.",
     approach:
@@ -329,8 +413,18 @@ export const PROJECTS: Project[] = [
       "Integrated reviews and brand narrative",
       "Optimised checkout and page speed",
     ],
-    stack: ["Shopify", "Liquid", "HTML5", "CSS3", "JavaScript"],
-    outcomes: [
+    stack: {
+      platform: ["Shopify"],
+      frontend: ["Liquid", "HTML5", "CSS3", "JavaScript"],
+      infrastructure: ["Shopify CDN"],
+    },
+    whyBuilt: [
+      "Lift conversion on a brand with strong product, weak storefront",
+      "Move from a fragile setup onto Shopify for reliability and scale",
+      "Bring nutritional storytelling into the product page itself",
+      "Tighten the path from product discovery to checkout",
+    ],
+    impact: [
       "Increased engagement and conversions",
       "Reduced bounce rate on mobile",
       "Improved mobile shopping experience",
@@ -359,6 +453,11 @@ export const PROJECTS: Project[] = [
     year: "2024",
     client: "Rapoo India",
     role: "UI/UX, Development, SEO Setup",
+    status: "Live",
+    team: "Solo",
+    timeline: "2024",
+    tags: ["WordPress", "WooCommerce", "E-commerce", "Live"],
+    liveUrl: "#",
     overview:
       "The legacy site lacked interactivity and proper e-commerce functionality. It needed modern storefront capabilities, a sharper brand presence, and a proper online shopping experience.",
     approach:
@@ -371,8 +470,19 @@ export const PROJECTS: Project[] = [
       "Strengthened security measures",
       "Subtle animations for transitions",
     ],
-    stack: ["WordPress", "WooCommerce", "PHP", "CSS", "JavaScript"],
-    outcomes: [
+    stack: {
+      platform: ["WordPress", "WooCommerce"],
+      frontend: ["Custom CSS", "JavaScript"],
+      backend: ["PHP", "MySQL"],
+      infrastructure: ["Managed Hosting", "SSL"],
+    },
+    whyBuilt: [
+      "Bring a global hardware brand's storefront in line with its product quality",
+      "Replace a legacy stack with a maintainable WooCommerce setup",
+      "Improve discoverability through better SEO architecture",
+      "Earn customer trust through visible security and faster pages",
+    ],
+    impact: [
       "Increased online sales",
       "Higher user engagement and session length",
       "Improved organic traffic via better SEO",
