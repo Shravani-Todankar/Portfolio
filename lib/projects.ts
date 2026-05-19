@@ -1,5 +1,6 @@
 import {
   Building2,
+  Gem,
   GraduationCap,
   Landmark,
   ShoppingBag,
@@ -344,6 +345,64 @@ export const PROJECTS: Project[] = [
       "https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=1600&q=80",
       "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1600&q=80",
     ],
+  },
+  {
+    slug: "bespokebliss",
+    icon: Gem,
+    iconLabel: "Bespoke Bliss",
+    title: "A refined WordPress site for a premium bespoke lifestyle brand.",
+    description:
+      "Custom-designed WordPress site for Bespoke Bliss — media-rich, polished and responsive, built to mirror the brand's premium positioning.",
+    meta: "WordPress Developer, 2024",
+    imageRatio: 4 / 3,
+    image: "/projects/bespokebliss/cover.png",
+    imageAlt: "Bespoke Bliss website cover",
+    mockup: "/projects/bespokebliss/mockup.png",
+    mockupRatio: 16 / 9,
+    tagline:
+      "A refined digital experience for a premium bespoke lifestyle and design brand.",
+    year: "2024",
+    client: "Bespoke Bliss",
+    role: "WordPress Developer",
+    status: "Live",
+    team: "Solo",
+    timeline: "Mid 2024 – Late 2024",
+    tags: ["WordPress", "Custom Website", "Luxury Brand", "Live"],
+    liveUrl: "https://bespokebliss.in/",
+    overview:
+      "Bespoke Bliss needed a website that reflected the elegance and premium positioning of its brand while remaining easy to navigate and visually balanced. The challenge was creating a polished experience that could showcase detailed visual content without making the site feel heavy or cluttered. The platform also needed to support smooth browsing across devices while maintaining a consistent aesthetic identity.",
+    approach:
+      "I focused on building a clean, media-focused experience aligned with the client's visual direction. The structure was designed to keep content organised while allowing imagery and layouts to feel immersive without affecting usability. Responsive sections, optimised loading behaviour for media-heavy pages and refined styling details kept things consistent and stable across the site.",
+    features: [
+      "Responsive multi-device layout",
+      "Custom-designed landing and inner pages",
+      "Optimised media and image presentation",
+      "Smooth scrolling and interaction effects",
+      "Structured content sections for service visibility",
+      "Clean navigation flow across pages",
+      "Consistent typography and spacing system",
+      "SEO-friendly page structure",
+    ],
+    stack: {
+      platform: ["WordPress"],
+      frontend: ["HTML", "CSS", "JavaScript"],
+      backend: ["PHP", "WordPress CMS"],
+      infrastructure: ["Managed Hosting", "SSL"],
+    },
+    whyBuilt: [
+      "Create a premium digital presence aligned with the brand identity",
+      "Improve usability while handling visually rich content",
+      "Ensure the site remained responsive and easy to maintain",
+      "Support future content updates and scalability",
+    ],
+    impact: [
+      "Improved overall visual presentation of the brand",
+      "Smoother browsing experience across devices",
+      "Content easier to navigate and manage",
+      "Delivered a stable and polished live website experience",
+      "Maintained a consistent premium aesthetic throughout the site",
+    ],
+    gallery: [],
   },
 ];
 
