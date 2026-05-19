@@ -12,8 +12,6 @@ const LOGOS: string[] = [
   "Techinfinity",
   "Hyperality",
   "BespokeBliss",
-  "Rapoo India",
-  "MosaicMinds",
   "Partagali Math",
 ];
 
