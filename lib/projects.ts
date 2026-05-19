@@ -238,10 +238,11 @@ export const PROJECTS: Project[] = [
     description:
       "A static, performance-first landing page hand-coded in HTML/CSS/JS, designed to honour the institution's heritage while staying fast on any device.",
     meta: "Front-end Developer, 2025",
-    imageRatio: 1024 / 768,
-    image:
-      "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1024&q=80",
-    imageAlt: "Partagalimath heritage landing page mockup",
+    imageRatio: 4 / 3,
+    image: "/projects/partagalimath-landing/cover.png",
+    imageAlt: "Partagalimath heritage landing page cover",
+    mockup: "/projects/partagalimath-landing/mockup.png",
+    mockupRatio: 16 / 9,
     tagline:
       "A hand-coded, mobile-first landing page replacing a heavy CMS setup.",
     year: "2025",
