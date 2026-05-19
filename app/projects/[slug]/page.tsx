@@ -144,10 +144,10 @@ export default async function ProjectDetailPage({
         <FadeIn delay={0.05}>
           <div
             className="ring-foreground/5 relative w-full overflow-hidden rounded-3xl bg-foreground/5 ring-1"
-            style={{ aspectRatio: project.imageRatio }}
+            style={{ aspectRatio: project.mockupRatio ?? project.imageRatio }}
           >
             <Image
-              src={project.image}
+              src={project.mockup ?? project.image}
               alt={project.imageAlt}
               fill
               sizes="(min-width: 1280px) 1100px, 100vw"

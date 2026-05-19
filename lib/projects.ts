@@ -27,6 +27,8 @@ export type Project = {
   imageRatio: number;
   image: string;
   imageAlt: string;
+  mockup?: string;
+  mockupRatio?: number;
   tagline: string;
   year: string;
   client: string;
@@ -54,10 +56,11 @@ export const PROJECTS: Project[] = [
     description:
       "Hard-coded marketing site built with HTML, CSS and JavaScript, designed to capture leads and present the program with cinematic polish.",
     meta: "Web Developer, 2026",
-    imageRatio: 1024 / 768,
-    image:
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1024&q=80",
-    imageAlt: "India's Future Tycoon landing page mockup",
+    imageRatio: 4 / 3,
+    image: "/projects/indias-future-tycoon/cover.png",
+    imageAlt: "India's Future Tycoon landing page cover",
+    mockup: "/projects/indias-future-tycoon/mockup.png",
+    mockupRatio: 16 / 9,
     tagline:
       "A national-level entrepreneurship search and mentorship platform for young innovators aged 13–18.",
     year: "2026",
@@ -113,10 +116,11 @@ export const PROJECTS: Project[] = [
     description:
       "Built the CRM front-end for one of Mumbai's premier real estate developers, focused on clean data presentation and an effortless agent workflow.",
     meta: "Front-end Developer, 2026",
-    imageRatio: 752 / 497,
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1024&q=80",
-    imageAlt: "Spenta real estate CRM mockup",
+    imageRatio: 4 / 3,
+    image: "/projects/spenta-enquiry-crm/cover.png",
+    imageAlt: "Spenta real estate CRM cover",
+    mockup: "/projects/spenta-enquiry-crm/mockup.png",
+    mockupRatio: 16 / 9,
     tagline:
       "A custom CRM that centralises customer enquiry and lead management across multiple premium properties.",
     year: "2026",
@@ -176,10 +180,11 @@ export const PROJECTS: Project[] = [
     description:
       "Redesigned and re-engineered the dashboards, report cards and admin tools for the neoRiSE Skill Passport program used across partner schools.",
     meta: "Full-stack Developer, 2026",
-    imageRatio: 1024 / 768,
-    image:
-      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1024&q=80",
-    imageAlt: "ENpower school learning platform mockup",
+    imageRatio: 4 / 3,
+    image: "/projects/enpower-school-revamp/cover.png",
+    imageAlt: "ENpower school learning platform cover",
+    mockup: "/projects/enpower-school-revamp/mockup.png",
+    mockupRatio: 16 / 9,
     tagline:
       "A comprehensive entrepreneurship learning ecosystem for schools, restructured for clarity and engagement.",
     year: "2026",
@@ -413,10 +418,11 @@ export const PROJECTS: Project[] = [
     description:
       "Reworked the Shopify storefront and product flows for a high-protein food brand — faster pages, sharper PDPs, smoother checkout.",
     meta: "Shopify Developer, 2025",
-    imageRatio: 1024 / 768,
-    image:
-      "https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=1024&q=80",
-    imageAlt: "EatProt e-commerce storefront mockup",
+    imageRatio: 4 / 3,
+    image: "/projects/eatprot-ecommerce-revamp/cover.png",
+    imageAlt: "EatProt e-commerce storefront cover",
+    mockup: "/projects/eatprot-ecommerce-revamp/mockup.png",
+    mockupRatio: 16 / 9,
     tagline:
       "A plant-based, high-protein vegetarian snack brand redesigned on Shopify.",
     year: "2025",
