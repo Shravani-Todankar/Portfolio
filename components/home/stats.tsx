@@ -12,9 +12,10 @@ type Stat = {
 };
 
 const STATS: Stat[] = [
-  { target: 14, suffix: "+", label: "Websites delivered" },
-  { target: 5, suffix: "+", label: "CMS platforms" },
+  { target: 45, suffix: "+", label: "Websites delivered" },
+  { target: 8, suffix: "+", label: "CMS platforms" },
   { target: 2, suffix: "+ yrs", label: "Industry experience" },
+  { target: 100, suffix: "%", label: "Mobile-friendly delivery" },
 ];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -32,7 +33,7 @@ export function Stats(): ReactNode {
             ref={containerRef}
             className="rounded-4xl border border-foreground/8 bg-background p-1.5 shadow-sm"
           >
-            <div className="grid grid-cols-1 gap-2 rounded-[1.6rem] bg-foreground/2 p-3 sm:grid-cols-3 sm:gap-3 sm:p-5 dark:bg-foreground/5">
+            <div className="grid grid-cols-2 gap-2 rounded-[1.6rem] bg-foreground/2 p-3 sm:grid-cols-4 sm:gap-3 sm:p-5 dark:bg-foreground/5">
               {STATS.map((stat, i) => (
                 <StatCard key={stat.label} stat={stat} start={inView} delay={i * 0.12} />
               ))}
