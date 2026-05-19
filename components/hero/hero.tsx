@@ -24,9 +24,9 @@ export function Hero(): ReactNode {
 
             <h1 className="text-[2.75rem] font-medium leading-[1.05] tracking-tight text-foreground md:text-[2.5rem] lg:text-[3.65rem]">
               <span className="block whitespace-nowrap">
-                Creative Web
+                I make the internet
               </span>
-              <span className="block whitespace-nowrap">Developer</span>
+              <span className="block whitespace-nowrap">a little prettier.</span>
             </h1>
 
             <p className="max-w-[52ch] text-[18px] leading-[1.5] tracking-tight text-foreground/65 sm:text-[20px]">
