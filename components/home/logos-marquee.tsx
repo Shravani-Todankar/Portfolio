@@ -8,8 +8,7 @@ type Brand = {
 };
 
 const LOGOS: Brand[] = [
-  { name: "Enpower School", logo: "/logos/enpower.png" },
-  { name: "Enpower Skill Lab", logo: "/logos/enpower.png" },
+  { name: "Enpower", logo: "/logos/enpower.png" },
   { name: "India's Future Tycoon", logo: "/logos/IFT_logo.png" },
   { name: "Spenta Corporation", logo: "/logos/spenta.png" },
   { name: "Kunuts", logo: "/logos/kunuts.png" },
