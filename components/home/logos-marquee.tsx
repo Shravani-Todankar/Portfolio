@@ -10,7 +10,7 @@ const LOGOS: string[] = [
   "Kunuts",
   "EatProt",
   "Techinfinity",
-  "Hyperality",
+  "HypeReality",
   "BespokeBliss",
   "Partagali Math",
 ];

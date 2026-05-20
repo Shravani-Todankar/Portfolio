@@ -409,20 +409,20 @@ export const PROJECTS: Project[] = [
   {
     slug: "hypereality",
     icon: Aperture,
-    iconLabel: "Hyper Reality",
-    title: "An immersive Webflow experience for Hyper Reality.",
+    iconLabel: "HypeReality",
+    title: "An immersive Webflow experience for HypeReality.",
     description:
-      "Motion-led Webflow build for Hyper Reality — animation-rich, responsive, and tuned for smooth interaction without sacrificing performance.",
+      "Motion-led Webflow build for HypeReality — animation-rich, responsive, and tuned for smooth interaction without sacrificing performance.",
     meta: "Webflow Developer, 2024",
     imageRatio: 4 / 3,
     image: "/projects/hypereality/cover.png",
-    imageAlt: "Hyper Reality website cover",
+    imageAlt: "HypeReality website cover",
     mockup: "/projects/hypereality/mockup.png",
     mockupRatio: 16 / 9,
     tagline:
       "An immersive Webflow experience built around motion, interaction, and visual storytelling.",
     year: "2024",
-    client: "Hyper Reality",
+    client: "HypeReality",
     role: "Webflow Developer",
     status: "Live",
     team: "Solo",
@@ -430,7 +430,7 @@ export const PROJECTS: Project[] = [
     tags: ["Webflow", "Interactive Design", "Animation", "Live"],
     liveUrl: "https://hypereality.webflow.io/",
     overview:
-      "Hyper Reality required a visually immersive website that could communicate a futuristic digital identity while maintaining usability and clarity. The project involved translating highly visual design concepts into a responsive web experience without compromising smoothness or structure. The challenge was balancing animation-heavy sections with performance — keeping the site engaging while still intuitive and accessible across devices.",
+      "HypeReality required a visually immersive website that could communicate a futuristic digital identity while maintaining usability and clarity. The project involved translating highly visual design concepts into a responsive web experience without compromising smoothness or structure. The challenge was balancing animation-heavy sections with performance — keeping the site engaging while still intuitive and accessible across devices.",
     approach:
       "Built in Webflow with a strong focus on layout precision, interaction flow and responsive behaviour. Motion and transitions were carefully integrated to support the visual narrative rather than overwhelm it. I optimised section structures, media handling and scrolling behaviour to keep interactions smooth while maintaining consistency in typography, spacing and overall visual rhythm.",
     features: [
