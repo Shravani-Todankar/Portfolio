@@ -15,10 +15,9 @@ const LOGOS: Brand[] = [
   { name: "Kunuts", logo: "/logos/kunuts.png" },
   { name: "EatProt", logo: "/logos/eatprot.png" },
   { name: "Techinfinity", logo: "/logos/techinfinity.png" },
-  { name: "HypeReality" },
+  { name: "HypeReality", logo: "/logos/quidich.jpeg" },
   { name: "BespokeBliss", logo: "/logos/bespokebliss.webp" },
   { name: "Partagali Math", logo: "/logos/partagali-math.webp" },
-  { name: "Quidich", logo: "/logos/quidich.jpeg" },
 ];
 
 export function LogosMarquee(): ReactNode {
