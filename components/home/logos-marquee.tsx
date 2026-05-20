@@ -29,28 +29,24 @@ export function LogosMarquee(): ReactNode {
           <p className="mb-6 text-center text-[13px] uppercase tracking-[0.12em] text-foreground/45 sm:mb-8">
             Brands I&rsquo;ve built for
           </p>
-          <div className="logos-marquee relative overflow-hidden rounded-3xl border border-foreground/8 bg-background py-5 sm:py-6">
-            <div className="logos-marquee__track flex w-max items-center gap-10 sm:gap-14">
-              {items.map((brand, i) => (
-                <span
-                  key={`${brand.name}-${i}`}
-                  className="text-foreground/65 inline-flex shrink-0 items-center gap-3"
-                >
-                  {brand.logo ? (
-                    <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-md bg-white sm:h-10 sm:w-10">
-                      <img
-                        src={brand.logo}
-                        alt=""
-                        className="h-7 w-7 object-contain sm:h-8 sm:w-8"
-                        draggable={false}
-                      />
-                    </span>
-                  ) : null}
-                  <span className="font-serif text-[18px] font-medium tracking-tight sm:text-[22px]">
-                    {brand.name}
+          <div className="logos-marquee relative overflow-hidden rounded-3xl border border-foreground/8 bg-background py-6 sm:py-8">
+            <div className="logos-marquee__track flex w-max items-center gap-12 sm:gap-16">
+              {items.map((brand, i) =>
+                brand.logo ? (
+                  <span
+                    key={`${brand.name}-${i}`}
+                    className="inline-flex h-12 w-28 shrink-0 items-center justify-center sm:h-14 sm:w-36"
+                    title={brand.name}
+                  >
+                    <img
+                      src={brand.logo}
+                      alt={brand.name}
+                      className="max-h-full max-w-full object-contain opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
+                      draggable={false}
+                    />
                   </span>
-                </span>
-              ))}
+                ) : null
+              )}
             </div>
             <div
               aria-hidden="true"
