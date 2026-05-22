@@ -14,7 +14,7 @@ const LOGOS: Brand[] = [
   { name: "Kunuts", logo: "/logos/kunuts.png" },
   { name: "EatProt", logo: "/logos/eatprot.png" },
   { name: "Techinfinity", logo: "/logos/techinfinity.png" },
-  { name: "HypeReality", logo: "/logos/quidich.jpeg" },
+  { name: "HypeReality", logo: "/logos/quidich-logo.png" },
   { name: "BespokeBliss", logo: "/logos/bespokebliss.webp" },
   { name: "Partagali Math", logo: "/logos/partagali-math.webp" },
 ];
