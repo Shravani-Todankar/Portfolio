@@ -55,7 +55,7 @@ export const PROJECTS: Project[] = [
     title: "Brand landing experience for India's Future Tycoon.",
     description:
       "Hard-coded marketing site built with HTML, CSS and JavaScript, designed to capture leads and present the program with cinematic polish.",
-    meta: "Web Developer, 2026",
+    meta: "Front-end Developer & Designer, 2026",
     imageRatio: 4 / 3,
     image: "/projects/indias-future-tycoon/cover.png",
     imageAlt: "India's Future Tycoon landing page cover",
@@ -65,12 +65,12 @@ export const PROJECTS: Project[] = [
       "A national-level entrepreneurship search and mentorship platform for young innovators aged 13–18.",
     year: "2026",
     client: "ENpower / India's Future Tycoons",
-    role: "Front-end Developer",
+    role: "Front-end Developer & Designer",
     status: "Live",
     team: "Solo",
     timeline: "Apr 2026",
     tags: ["Landing Page", "HTML/CSS/JS", "GSAP", "Completed"],
-    liveUrl: "#",
+    liveUrl: "https://indiafuturetycoons.com/",
     overview:
       "India's Future Tycoons (IFT) is a national-level entrepreneurship search and mentorship platform designed for young innovators aged 13–18. The challenge was to present a large-scale program engagingly to a youth audience, while keeping program value clear, holding attention through interactivity, and ultimately driving registrations.",
     approach:
@@ -115,7 +115,7 @@ export const PROJECTS: Project[] = [
     title: "Real Estate CRM front-end for Spenta.",
     description:
       "Built the CRM front-end for one of Mumbai's premier real estate developers, focused on clean data presentation and an effortless agent workflow.",
-    meta: "Front-end Developer, 2026",
+    meta: "Front-end Developer & Designer, 2026",
     imageRatio: 4 / 3,
     image: "/projects/spenta-enquiry-crm/cover.png",
     imageAlt: "Spenta real estate CRM cover",
@@ -125,12 +125,12 @@ export const PROJECTS: Project[] = [
       "A custom CRM that centralises customer enquiry and lead management across multiple premium properties.",
     year: "2026",
     client: "Spenta Corporation",
-    role: "Front-end Developer",
-    status: "In Production",
+    role: "Front-end Developer & Designer",
+    status: "Live",
     team: "Team of 2",
     timeline: "Feb 2026 – Present",
-    tags: ["CRM", "Django", "Bootstrap", "In Production"],
-    liveUrl: "#",
+    tags: ["CRM", "Django", "Bootstrap", "Live"],
+    liveUrl: "https://enquiry.spentacorporation.com/",
     overview:
       "The existing enquiry and lead management process at Spenta was highly fragmented, with customer data scattered across multiple platforms and manual systems. Sales teams depended on spreadsheets rather than integrated tools, which hindered lead tracking across properties and made RERA compliance harder than it needed to be.",
     approach:
@@ -179,7 +179,7 @@ export const PROJECTS: Project[] = [
     title: "School learning platform revamp for ENpower.",
     description:
       "Redesigned and re-engineered the dashboards, report cards and admin tools for the neoRiSE Skill Passport program used across partner schools.",
-    meta: "Full-stack Developer, 2026",
+    meta: "Web Developer & Designer, 2026",
     imageRatio: 4 / 3,
     image: "/projects/enpower-school-revamp/cover.png",
     imageAlt: "ENpower school learning platform cover",
@@ -189,12 +189,12 @@ export const PROJECTS: Project[] = [
       "A comprehensive entrepreneurship learning ecosystem for schools, restructured for clarity and engagement.",
     year: "2026",
     client: "ENpower",
-    role: "Web Developer",
+    role: "Web Developer & Designer",
     status: "Live",
     team: "Solo",
     timeline: "Apr 2026",
     tags: ["EdTech", "HTML/CSS/JS", "GSAP", "Completed"],
-    liveUrl: "#",
+    liveUrl: "https://enpower-school.com/",
     overview:
       "The existing ENpower website struggled to effectively communicate its diverse ecosystem of offerings due to poor structure and outdated design. Users found it difficult to understand the different programs and navigate between them, resulting in a fragmented experience.",
     approach:
@@ -206,11 +206,11 @@ export const PROJECTS: Project[] = [
       "Scroll-based animations and transitions using GSAP",
       "Fully responsive design across all devices",
       "Improved navigation and content hierarchy",
-      "Integrated form handling via EmailJS",
+      "Integrated form handling via Zepto Mail",
     ],
     stack: {
       frontend: ["HTML5", "CSS3", "Vanilla JavaScript", "Bootstrap 5.3.2"],
-      platform: ["GSAP", "EmailJS"],
+      platform: ["GSAP", "Zepto Mail"],
       infrastructure: ["Google Fonts", "Material Symbols", "Static Hosting"],
     },
     whyBuilt: [
@@ -239,7 +239,7 @@ export const PROJECTS: Project[] = [
     title: "Hard-coded landing page for Partagalimath.",
     description:
       "A static, performance-first landing page hand-coded in HTML/CSS/JS, designed to honour the institution's heritage while staying fast on any device.",
-    meta: "Front-end Developer, 2025",
+    meta: "Developer, 2025",
     imageRatio: 4 / 3,
     image: "/projects/partagalimath-landing/cover.png",
     imageAlt: "Partagalimath heritage landing page cover",
@@ -249,12 +249,12 @@ export const PROJECTS: Project[] = [
       "A hand-coded, mobile-first landing page replacing a heavy CMS setup.",
     year: "2025",
     client: "Partagalimath",
-    role: "Developer & Designer",
+    role: "Developer",
     status: "Completed",
     team: "Solo",
     timeline: "2025",
     tags: ["Landing Page", "HTML/CSS/JS", "Completed"],
-    liveUrl: "#",
+    liveUrl: "https://partagalimath.crmleadgen.net/Landingpage/",
     overview:
       "The previous landing solution used a heavy CMS or builder that resulted in slow page load speeds and poor mobile performance. Inconsistent styling, missing interactive elements, asset bloat, and the lack of a mobile-first approach were driving high bounce rates and weak engagement.",
     approach:
@@ -313,7 +313,7 @@ export const PROJECTS: Project[] = [
     team: "Solo",
     timeline: "Oct 2024 – Feb 2025",
     tags: ["Shopify", "E-commerce", "Live"],
-    liveUrl: "#",
+    liveUrl: "https://eatprot.com/",
     overview:
       "EatProt is a plant-based food brand offering high-protein vegetarian snacks. The original website lacked a modern, user-friendly interface and did not effectively support e-commerce functionality. Product presentation was inadequate, limiting users' ability to understand the benefits of each item.",
     approach:
@@ -414,7 +414,7 @@ export const PROJECTS: Project[] = [
     title: "A professional financial services platform for Finvvritti.",
     description:
       "Service-focused website built for clarity, trust and accessibility — organised content, responsive layouts and a manageable update workflow.",
-    meta: "WordPress Developer, 2024",
+    meta: "Full Stack Developer, 2026",
     imageRatio: 4 / 3,
     image: "/projects/finvvritti/cover.png",
     imageAlt: "Finvvritti financial services website cover",
@@ -422,12 +422,12 @@ export const PROJECTS: Project[] = [
     mockupRatio: 16 / 9,
     tagline:
       "A professional financial services platform focused on clarity, trust, and accessibility.",
-    year: "2024",
+    year: "2026",
     client: "Finvvritti",
-    role: "WordPress Developer",
+    role: "Full Stack Developer",
     status: "Live",
     team: "Team of 2",
-    timeline: "Mid 2024 – Late 2024",
+    timeline: "April 2026 – May 2026",
     tags: ["WordPress", "Financial Services", "Responsive Design", "Live"],
     liveUrl: "https://finvvritti.com/",
     overview:
