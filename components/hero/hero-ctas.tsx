@@ -40,7 +40,7 @@ export function HeroCtas(): ReactNode {
           transition={{ layout: { duration: 0.55, ease: EASE } }}
         >
           <a
-            href="/cv.pdf"
+            href="/Shravani Vikas Todankar-CV.pdf"
             download
             className="border border-foreground/5 focus-ring group inline-flex cursor-pointer items-center gap-2 rounded-xl bg-background px-5 py-2.5 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground/4 hover:text-foreground"
           >
