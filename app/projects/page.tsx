@@ -6,8 +6,9 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = createMetadata({
-  title: "Projects",
-  description: "Selected work and case studies.",
+  title: "Projects — 8 case studies across React, Shopify, Webflow & WordPress",
+  description:
+    "Selected case studies: a Shopify ecommerce revamp, a real-estate CRM, a financial-services platform, and 5 more — each with the problem, the build, the stack, and the outcome.",
   path: "/projects",
 });
 

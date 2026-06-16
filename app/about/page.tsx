@@ -10,8 +10,9 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = createMetadata({
-  title: "About",
-  description: "About me, background, and how to get in touch.",
+  title: "About Shravani — Front-end Developer & Designer",
+  description:
+    "Mumbai-based front-end developer with 2+ years building production sites for real-estate, fintech, edtech and D2C brands. Skills, experience, education and what I'm shipping next.",
   path: "/about",
 });
 

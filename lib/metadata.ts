@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 export const siteConfig = {
   name: "Shravani Todankar",
   description:
-    "Creative web developer building sleek, functional websites with WordPress, Webflow, Shopify and React JS.",
-  url: "https://shravanitodankar.framer.website",
+    "Front-end developer in Mumbai shipping fast, animation-led websites for brands across India. 45+ launches across React, Next.js, WordPress, Shopify & Webflow. Open to full-time and freelance roles.",
+  url: "https://shravanitodankar.vercel.app",
   ogImage: "/og-image.png",
   creator: "@shravanitodankar",
   authors: [
     {
       name: "Shravani Todankar",
-      url: "https://shravanitodankar.framer.website",
+      url: "https://shravanitodankar.vercel.app",
     },
   ],
   keywords: [
@@ -28,8 +28,9 @@ export const siteConfig = {
 export const baseMetadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`,
+    default:
+      "Shravani Todankar — Front-end Developer building React, WordPress & Shopify sites",
+    template: `%s · ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: [...siteConfig.keywords],
@@ -54,7 +55,8 @@ export const baseMetadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteConfig.url,
-    title: siteConfig.name,
+    title:
+      "Shravani Todankar — Front-end Developer building React, WordPress & Shopify sites",
     description: siteConfig.description,
     siteName: siteConfig.name,
     images: [
@@ -68,7 +70,8 @@ export const baseMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
+    title:
+      "Shravani Todankar — Front-end Developer building React, WordPress & Shopify sites",
     description: siteConfig.description,
     images: [siteConfig.ogImage],
     creator: siteConfig.creator,
@@ -102,7 +105,7 @@ export function createMetadata({
   const ogImage = image ?? siteConfig.ogImage;
 
   return {
-    title,
+    ...(title !== undefined && { title }),
     description,
     alternates: {
       canonical: path,

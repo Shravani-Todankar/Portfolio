@@ -17,6 +17,13 @@ export type StackByCategory = {
   infrastructure?: string[];
 };
 
+export type Metric = {
+  label: string;
+  value: string;
+  detail?: string;
+  source?: "measured" | "estimated" | "client-reported";
+};
+
 export type Project = {
   slug: string;
   icon: ComponentType<{ className?: string }>;
@@ -38,6 +45,7 @@ export type Project = {
   timeline: string;
   tags: string[];
   liveUrl: string;
+  metrics?: Metric[];
   overview: string;
   approach: string;
   features: string[];
@@ -71,6 +79,11 @@ export const PROJECTS: Project[] = [
     timeline: "Apr 2026",
     tags: ["Landing Page", "HTML/CSS/JS", "GSAP", "Completed"],
     liveUrl: "https://indiafuturetycoons.com/",
+    metrics: [
+      { label: "Audience", value: "13–18 yrs", detail: "National-level program", source: "client-reported" },
+      { label: "Format", value: "Single-page", detail: "Storytelling landing experience", source: "measured" },
+      { label: "Stack", value: "Tailwind + GSAP", detail: "Scroll-based animations", source: "measured" },
+    ],
     overview:
       "India's Future Tycoons (IFT) is a national-level entrepreneurship search and mentorship platform designed for young innovators aged 13–18. The challenge was to present a large-scale program engagingly to a youth audience, while keeping program value clear, holding attention through interactivity, and ultimately driving registrations.",
     approach:
@@ -131,6 +144,12 @@ export const PROJECTS: Project[] = [
     timeline: "Feb 2026 – Present",
     tags: ["CRM", "Django", "Bootstrap", "Live"],
     liveUrl: "https://enquiry.spentacorporation.com/",
+    metrics: [
+      { label: "Properties unified", value: "5", detail: "Altavista, Ornata, Medius, Stardeous, Anthea", source: "measured" },
+      { label: "Replaced", value: "Spreadsheet workflows", detail: "Centralised enquiry & lead pipeline", source: "client-reported" },
+      { label: "User roles", value: "3+", detail: "Admin, sales, agent — RBAC", source: "measured" },
+      { label: "Compliance", value: "RERA-aligned", detail: "Documented audit trail", source: "client-reported" },
+    ],
     overview:
       "The existing enquiry and lead management process at Spenta was highly fragmented, with customer data scattered across multiple platforms and manual systems. Sales teams depended on spreadsheets rather than integrated tools, which hindered lead tracking across properties and made RERA compliance harder than it needed to be.",
     approach:
@@ -195,6 +214,11 @@ export const PROJECTS: Project[] = [
     timeline: "Apr 2026",
     tags: ["EdTech", "HTML/CSS/JS", "GSAP", "Completed"],
     liveUrl: "https://enpower-school.com/",
+    metrics: [
+      { label: "Programs consolidated", value: "5", detail: "FSL, CSL, TIL, Impact, Training Academy", source: "measured" },
+      { label: "Form integration", value: "Zepto Mail", detail: "Replaced fragmented inboxes", source: "measured" },
+      { label: "Schools served", value: "Partner network", source: "client-reported" },
+    ],
     overview:
       "The existing ENpower website struggled to effectively communicate its diverse ecosystem of offerings due to poor structure and outdated design. Users found it difficult to understand the different programs and navigate between them, resulting in a fragmented experience.",
     approach:
@@ -255,6 +279,11 @@ export const PROJECTS: Project[] = [
     timeline: "2025",
     tags: ["Landing Page", "HTML/CSS/JS", "Completed"],
     liveUrl: "https://partagalimath.crmleadgen.net/Landingpage/",
+    metrics: [
+      { label: "Replaced", value: "Heavy CMS build", detail: "Migrated to hand-coded static", source: "measured" },
+      { label: "Approach", value: "Mobile-first", detail: "Lazy-load + minified assets", source: "measured" },
+      { label: "Devices tested", value: "Desktop / tablet / mobile", source: "measured" },
+    ],
     overview:
       "The previous landing solution used a heavy CMS or builder that resulted in slow page load speeds and poor mobile performance. Inconsistent styling, missing interactive elements, asset bloat, and the lack of a mobile-first approach were driving high bounce rates and weak engagement.",
     approach:
@@ -314,6 +343,12 @@ export const PROJECTS: Project[] = [
     timeline: "Oct 2024 – Feb 2025",
     tags: ["Shopify", "E-commerce", "Live"],
     liveUrl: "https://eatprot.com/",
+    metrics: [
+      { label: "Platform migration", value: "Custom → Shopify", source: "measured" },
+      { label: "PDPs redesigned", value: "Entire catalogue", source: "measured" },
+      { label: "Timeline", value: "4 months", detail: "Oct 2024 → Feb 2025", source: "measured" },
+      { label: "Conversion focus", value: "Checkout flow rebuilt", source: "measured" },
+    ],
     overview:
       "EatProt is a plant-based food brand offering high-protein vegetarian snacks. The original website lacked a modern, user-friendly interface and did not effectively support e-commerce functionality. Product presentation was inadequate, limiting users' ability to understand the benefits of each item.",
     approach:
@@ -372,6 +407,11 @@ export const PROJECTS: Project[] = [
     timeline: "Mid 2024 – Late 2024",
     tags: ["WordPress", "Custom Website", "Luxury Brand", "Live"],
     liveUrl: "https://bespokebliss.in/",
+    metrics: [
+      { label: "Build", value: "Custom WordPress", detail: "Landing + inner pages", source: "measured" },
+      { label: "Media-heavy", value: "Optimised loading", source: "measured" },
+      { label: "Status", value: "Live & in production", source: "measured" },
+    ],
     overview:
       "Bespoke Bliss needed a website that reflected the elegance and premium positioning of its brand while remaining easy to navigate and visually balanced. The challenge was creating a polished experience that could showcase detailed visual content without making the site feel heavy or cluttered. The platform also needed to support smooth browsing across devices while maintaining a consistent aesthetic identity.",
     approach:
@@ -430,6 +470,11 @@ export const PROJECTS: Project[] = [
     timeline: "April 2026 – May 2026",
     tags: ["WordPress", "Financial Services", "Responsive Design", "Live"],
     liveUrl: "https://finvvritti.com/",
+    metrics: [
+      { label: "Stack", value: "Full-stack", detail: "Node.js + PostgreSQL + Railway", source: "measured" },
+      { label: "Service pages", value: "Multi-tier", detail: "Organised financial offerings", source: "measured" },
+      { label: "Timeline", value: "6 weeks", detail: "Apr → May 2026", source: "measured" },
+    ],
     overview:
       "Finvvritti needed a website that could present financial services in a clear and approachable manner while maintaining a professional and trustworthy appearance. The challenge was organizing service-heavy content into a structure that felt simple to navigate without overwhelming users. The website also needed to perform consistently across devices while supporting future updates and content expansion in a manageable way.",
     approach:
@@ -488,6 +533,11 @@ export const PROJECTS: Project[] = [
     timeline: "Mid 2024 – Late 2024",
     tags: ["Webflow", "Interactive Design", "Animation", "Live"],
     liveUrl: "https://hypereality.webflow.io/",
+    metrics: [
+      { label: "Platform", value: "Webflow", detail: "Animation-led custom build", source: "measured" },
+      { label: "Interactions", value: "Scroll + hover + transitions", source: "measured" },
+      { label: "Status", value: "Live", source: "measured" },
+    ],
     overview:
       "HypeReality required a visually immersive website that could communicate a futuristic digital identity while maintaining usability and clarity. The project involved translating highly visual design concepts into a responsive web experience without compromising smoothness or structure. The challenge was balancing animation-heavy sections with performance — keeping the site engaging while still intuitive and accessible across devices.",
     approach:

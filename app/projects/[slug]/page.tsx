@@ -29,9 +29,24 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) return createMetadata({ title: "Project not found" });
+
+  let liveHost = "";
+  try {
+    liveHost =
+      project.liveUrl && project.liveUrl !== "#"
+        ? new URL(project.liveUrl).hostname.replace(/^www\./, "")
+        : "";
+  } catch {
+    liveHost = "";
+  }
+
+  const description = liveHost
+    ? `${project.tagline} Live at ${liveHost}.`
+    : project.tagline;
+
   return createMetadata({
-    title: project.iconLabel,
-    description: project.tagline,
+    title: `${project.iconLabel} — ${project.role}, ${project.year}`,
+    description,
     path: `/projects/${project.slug}`,
     image: project.image,
   });
@@ -160,10 +175,12 @@ export default async function ProjectDetailPage({
 
       <section className="mx-auto w-full max-w-200 px-6 pt-20 sm:px-10 sm:pt-28">
         <FadeIn>
-          <SectionLabel>01 — Overview</SectionLabel>
-          <p className="mt-5 text-[17px] leading-[1.7] tracking-tight text-foreground/75 sm:text-[19px]">
-            {project.overview}
-          </p>
+          <div>
+            <SectionLabel>01 — Overview</SectionLabel>
+            <p className="mt-5 text-[17px] leading-[1.7] tracking-tight text-foreground/75 sm:text-[19px]">
+              {project.overview}
+            </p>
+          </div>
         </FadeIn>
 
         <FadeIn delay={0.05}>

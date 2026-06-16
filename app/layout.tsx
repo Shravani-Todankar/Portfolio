@@ -2,7 +2,7 @@ import { Nav } from "@/components/layout/nav";
 import { PageBackdrop } from "@/components/layout/page-backdrop";
 import { Providers } from "@/components/layout/providers";
 import { SkipToContent } from "@/components/layout/skip-to-content";
-import { baseMetadata } from "@/lib/metadata";
+import { baseMetadata, siteConfig } from "@/lib/metadata";
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Geist, Geist_Mono } from "next/font/google";
 import type { ReactNode } from "react";
@@ -29,6 +29,35 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = baseMetadata;
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Shravani Todankar",
+  jobTitle: "Front-end Developer",
+  url: siteConfig.url,
+  image: `${siteConfig.url}/og-image.png`,
+  description:
+    "Front-end developer building fast, animation-led websites with React, Next.js, WordPress, Shopify and Webflow.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Mumbai",
+    addressCountry: "IN",
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/shravani-todankar",
+    "https://github.com/Shravani-Todankar",
+  ],
+  knowsAbout: [
+    "React",
+    "Next.js",
+    "JavaScript",
+    "Shopify",
+    "WordPress",
+    "Webflow",
+    "Front-end Development",
+  ],
+};
+
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
@@ -49,6 +78,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} min-h-screen bg-background font-sans text-foreground antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <Providers>
           <div className="site-frame site-frame--top" aria-hidden="true" />
           <div className="site-frame site-frame--left" aria-hidden="true" />
